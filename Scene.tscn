@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ExpressionPro.tres" type="DynamicFont" id=1]
+[ext_resource path="res://DrawingTest.gd" type="Script" id=2]
+[ext_resource path="res://HydratingLip.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Label2.gd" type="Script" id=4]
+[ext_resource path="res://sword.png" type="Texture" id=5]
+[ext_resource path="res://sword.gd" type="Script" id=6]
+[ext_resource path="res://Group 1.png" type="Texture" id=7]
+[ext_resource path="res://Label.gd" type="Script" id=8]
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = ExtResource( 3 )
+
+[node name="Scene" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -64, -64 )
+script = ExtResource( 2 )
+
+[node name="sword" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.984314, 0.984314, 0.984314, 1 )
+position = Vector2( 706.381, 219.783 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="sword2" type="Sprite" parent="."]
+modulate = Color( 0.984314, 0.984314, 0.984314, 1 )
+position = Vector2( 635.194, 280.86 )
+texture = ExtResource( 7 )
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 217.973
+margin_top = 518.032
+margin_right = 1044.97
+margin_bottom = 630.032
+rect_pivot_offset = Vector2( 413, 56 )
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0.87451, 1, 0.917647, 1 )
+text = "PRESS START"
+align = 1
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -88.7179
+margin_top = -469.386
+margin_right = 1066.28
+margin_bottom = -199.386
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 0.686275, 1, 0, 1 )
+text = "x_x"
+align = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
